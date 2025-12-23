@@ -19,6 +19,7 @@
       text-align: center;
       position: sticky;
       top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -33,12 +34,19 @@
       text-decoration: underline;
     }
 
+    section {
+      padding: 60px;
+    }
+
+    h1, h2 {
+      color: #00bcd4;
+    }
+
     /* HERO */
     .hero {
-      min-height: 90vh;
+      height: 100vh;
       display: flex;
       align-items: center;
-      padding: 60px;
       background: radial-gradient(circle, #111, #000);
     }
 
@@ -57,12 +65,12 @@
     }
 
     .hero-text p {
-      max-width: 600px;
+      max-width: 520px;
       color: #ccc;
       line-height: 1.6;
     }
 
-    .btn {
+    .hero-btn {
       display: inline-block;
       padding: 12px 30px;
       background: #00e5ff;
@@ -70,19 +78,15 @@
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      margin: 10px 10px 0 0;
+      margin-right: 15px;
     }
 
-    .btn:hover {
+    .hero-btn:hover {
       background-color: #4caf50;
     }
 
-    section {
-      padding: 40px 60px;
-    }
-
-    h2 {
-      color: #00bcd4;
+    ul {
+      margin-left: 20px;
     }
   </style>
 </head>
@@ -98,41 +102,47 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <section class="hero">
   <div class="hero-text">
     <h4>DATA ANALYST</h4>
     <h1>Hi, I'm <span>Sowmya</span></h1>
     <p>
-      I analyze data to uncover insights and build interactive dashboards
-      using Power BI, SQL, and Python.
+      I analyze data to uncover insights and build interactive dashboards using
+      Power BI, SQL, and Oracle.
     </p>
 
-    <a href="projects.html" class="btn">View Projects</a>
-    <a href="resume.pdf" class="btn" target="_blank">View Resume</a>
-    <a href="resume.pdf" class="btn" download>Download Resume</a>
+    <a href="projects.html" class="hero-btn">View Projects</a>
+    <a href="resume.pdf" class="hero-btn" target="_blank">View Resume</a>
   </div>
 </section>
 
-<!-- HOME SUMMARY -->
+<!-- HOME SUMMARY (ABOUT PREVIEW) -->
 <section>
-  <h2>Quick Overview</h2>
+  <h2>About Me</h2>
   <p>
-    I am a dedicated Data Analyst passionate about transforming complex datasets
-    into actionable insights using analytics and visualization tools.
+    I am a Data Analyst skilled in Power BI, SQL, and Python, focused on
+    transforming data into actionable insights.
   </p>
 
   <h3>Core Skills</h3>
   <ul>
-    <li>Power BI, Tableau, Excel Dashboards</li>
+    <li>Data Analysis & Visualization</li>
+    <li>Power BI, Tableau, Excel</li>
     <li>SQL, Python (Pandas, NumPy)</li>
-    <li>Data Cleaning & Statistical Analysis</li>
   </ul>
 
-  <a href="about.html" class="btn">Read More About Me</a>
+  <a href="about.html" class="hero-btn">Read More</a>
+</section>
+
+<!-- RESUME AT BOTTOM -->
+<section>
+  <h2>Resume</h2>
+  <a href="resume.pdf" class="hero-btn" target="_blank">View Resume</a>
+  <a href="resume.pdf" class="hero-btn" download>Download Resume</a>
 </section>
 
 </body>
 </html>
 
-
+ 
