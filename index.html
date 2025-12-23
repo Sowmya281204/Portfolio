@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>A. Sowmya | Portfolio</title>
 
   <style>
@@ -11,12 +12,14 @@
       color: white;
     }
 
+    /* NAVBAR */
     nav {
       background-color: #111;
       padding: 15px;
       text-align: center;
-position: sticky;
+      position: sticky;
       top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -30,265 +33,295 @@ position: sticky;
       text-decoration: underline;
     }
 
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 60px;
+      background: radial-gradient(circle, #111, #000);
+    }
+
+    .hero-text h4 {
+      color: #00e5ff;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+
+    .hero-text h1 span {
+      color: #00e5ff;
+    }
+
+    .hero-text p {
+      max-width: 520px;
+      margin: 20px 0;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #00e5ff;
+      color: black;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
     section {
- padding: 40px;
+      padding: 40px;
     }
 
     h1, h2 {
       color: #00bcd4;
     }
 
-    .box {
+    /* TABS */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+
+    .tabs input {
+      display: none;
+    }
+
+    .tabs label {
+      padding: 10px 25px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #aaa;
+      margin-right: 25px;
+    }
+
+    .tabs .content {
+      width: 100%;
+      display: none;
+      padding-top: 20px;
+    }
+
+    .tabs input:checked + label {
+      color: #ff4d4d;
+      border-bottom: 2px solid #ff4d4d;
+    }
+
+    .tabs input:checked + label + .content {
+      display: block;
+    }
+
+    /* PROJECTS */
+    .project {
+      background-color: #111;
+      padding: 25px;
+      border-left: 4px solid #00bcd4;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    .project img {
+      width: 100%;
+      max-width: 700px;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+
+    /* CERTIFICATES */
+    .certificate {
       background-color: #111;
       padding: 20px;
       border-left: 4px solid #00bcd4;
       border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .date {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* RESUME */
+    .resume-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #00bcd4;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-right: 15px;
+    }
+
+    .resume-btn:hover {
+      background-color: #4caf50;
     }
   </style>
 </head>
 
 <body>
+
 <!-- NAVBAR -->
 <nav>
-  <a href="index.html">Home</a>
-  <a href="About me.html">About Me</a>
+  <a href="Home.html">Home</a>
+  <a href="About me.Html">About Me</a>
   <a href="Projects.html">Projects</a>
-  <a href="Certifications & Achievements.html">Certifications & Achievements</a>
-  <a href="Contact me.html">Contact</a>
+  <a href="Certifications.html">Certifications</a>
+  <a href="Contact.html">Contact</a>
 </nav>
 
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h4>DATA ANALYST</h4>
+    <h1>Hi, I'm <span>Sowmya</span></h1>
+    <p>
+      I analyze data to uncover insights and build interactive dashboards
+      using Power BI, SQL, and Oracle.
+    </p>
+    <a href="Projects" class="hero-btn">View My Projects</a>
+  </div>
+</section>
 
-<h1 style="text-align:center;">Hi, I'm Sowmya Welcome to my Portfolio</h1>
-<h2>About me</h2> 
-<p style="line-height:20px;">Hi! I’m Sowmya, a dedicated Data Analyst passionate about transforming complex data into clear, actionable business strategies. I specialize in performing advanced statistical analysis and data modeling using R, and I excel at creating interactive, high-impact dashboards in Power BI and Tableau. My expertise extends to Advanced Excel (including VBA and complex modeling) and SQL for robust data extraction. Whether it's cleaning messy datasets or performing predictive analysis, I thrive on turning raw numbers into visual stories that drive informed decision-making. I’m always eager to leverage my technical toolkit to help organizations solve real-world problems through data.</p>
-<style>
-  .tabs {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 600px;
-    font-family: sans-serif;
-  }
-  .tabs input[type="radio"] {
-    display: none; /* Hides the actual radio circles */
-  }
-  .tabs label {
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #888;
-  }
-  .tabs .content {
-    display: none; /* Hides all content by default */
-    width: 100%;
-    padding: 20px;
-    order: 1;
-  }
-  /* When a radio is checked, change label color and show content */
-  .tabs input[type="radio"]:checked + label {
-    color: #ff4d4d;
-    border-bottom: 2px solid #ff4d4d;
-  }
-  .tabs input[type="radio"]:checked + label + .content {
-    display: block;
-  }
-</style>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I'm a dedicated Data Analyst passionate about transforming complex data
+    into actionable insights using analytics, visualization, and SQL-based
+    data processing.
+  </p>
 
-<div class="tabs">
-  <input type="radio" name="tabs" id="tabskills" checked>
-  <label for="tabskills">Skills</label>
-  <div class="content">
-    <p style="color: white; font-weight: bold;line-height:5px;">Programming</p>
-    <p>R,Python(Pandas,Numpy,Matplotlib)</p>
-    <p style="color: white; font-weight: bold;line-height:5px;">Databases</p> 
-    <p>SQL(MySQL,PostgreSQL)</p>
-    <p style="color: white; font-weight: bold;line-height:5px;">Data Visualization</p> 
-    <p>Tableau,Power BI,Excel Dahboards</p> 
-    <p style="color: white; font-weight: bold;line-height:5px;">Statistical Analysis</p> 
-    <p>Hypothesis Testing,Regression,Data Cleaning</p>  
+  <!-- TABS -->
+  <div class="tabs">
+    <input type="radio" name="tabs" id="skills" checked>
+    <label for="skills">Skills</label>
+    <div class="content">
+      <p><b>Programming:</b> R, Python (Pandas, NumPy, Matplotlib)</p>
+      <p><b>Databases:</b> SQL (MySQL, PostgreSQL)</p>
+      <p><b>Visualization:</b> Power BI, Tableau, Excel</p>
+      <p><b>Statistics:</b> Hypothesis Testing, Regression</p>
+    </div>
+
+    <input type="radio" name="tabs" id="internship">
+    <label for="internship">Internship</label>
+    <div class="content">
+      <p><b>Data Analyst Intern</b></p>
+      <p>Worked on marketing research, documentation, and data analysis tasks.</p>
+    </div>
+
+    <input type="radio" name="tabs" id="education">
+    <label for="education">Education</label>
+    <div class="content">
+      <p><b>BSc (MSCs)</b> – KV Ranga Reddy Degree College (2023–2026)</p>
+      <p><b>Intermediate</b> – Naveena Junior College (2021–2023)</p>
+      <p><b>SSC</b> – Central Grammar High School</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Sleep Health and Lifestyle Dashboard</h3>
+    <p><b>Tools:</b> Power BI, Oracle, SQL</p>
+    <p>
+      Built an interactive dashboard to analyze sleep patterns, stress levels,
+      BMI categories, blood pressure, and lifestyle factors.
+    </p>
+
+    <!-- 👉 ADD IMAGE PATH BELOW -->
+    <img src="image2.png" alt="Sleep Health Dashboard">
   </div>
 
-  <input type="radio" name="tabs" id="tabexp">
-  <label for="tabexp">Internship</label>
-  <div class="content">
-    <p style="color: white; font-weight: bold;line-height:5px;">Data Analyst</p>
-    <p>Worked on tasks related to Marketing,Research,and Documentation.
-       performed well on assigned tasks.</p>
-  </div>
+  <div class="project">
+    <h3>Sales Overview Dashboard</h3>
+    <p><b>Tools:</b> Power BI, SQL</p>
+    <p>
+      Designed a sales performance dashboard analyzing revenue, discounts,
+      customer trends, and store-level insights.
+    </p>
 
-  <input type="radio" name="tabs" id="tableu">
-  <label for="tableu">Education</label>
-  <div class="content">
-    <p style="color: ; font-weight: bold;line-height:5px;">K V Rangareddy Degree College For Women(2023-2026)</p>
-    <p>Degree in Bachelor of Science (MSCs)-[CGPA:8.0/10]</p>
-        <p style="color: white; font-weight: bold;line-height:5px;">Naveena Junior College(2021-2023)</p>
-    <p>Board of Intermediate-[GPA:9.1/10]</p>
-        <p style="color: white; font-weight: bold;line-height:5px;">Central Grammar High School(2021)</p>
-    <p>Board of Secondary Education-[GPA:10/10]</p>
+    <!-- 👉 ADD IMAGE PATH BELOW -->
+    <img src="image.png" alt="Sales Dashboard">
   </div>
-</div> 
-<body style="background-color: black;">
-<style>
-  body {
-    color: white;
-  }
-</style>
-<h2>Projects</h3>
-<p style="line-height:20px;"><h3>Sleep Health and Lifestyle Dashboard</h3>
-<p><b>Tools:</b> Power BI, Oracle, SQL</p>
-<p>
-Built an interactive dashboard to analyze sleep patterns, stress levels,
-BMI categories, blood pressure, and lifestyle factors using data from Oracle.
-</p>
-<img src="image2.png" width="600">
-<p style="line-height:20px;"><h3>Sales Overview Dasboard</h3>
-<p><b>Tools:</b> Power BI, Oracle, SQL</p>
-<p>
-Built an interactive dashboard to analyze sleep patterns, stress levels,
-BMI categories, blood pressure, and lifestyle factors using data from Oracle.
-</p>
-<img src="image.png" width="600"> 
+</section>
+
+<!-- CERTIFICATIONS -->
 <section id="certifications">
   <h2>Certifications & Achievements</h2>
 
-  <!-- 2025 -->
-  <div class="certificate achievement">
+  <div class="certificate">
     <h3>🥇 First Prize – Sales Data Analysis Presentation</h3>
     <p class="date">October 2025</p>
-    <p>
-      Awarded First Prize (Gold Medal) for presenting an analytical report on
-      Sales Data, demonstrating data visualization skills, insights generation,
-      and effective presentation of business findings.
-    </p>
+    <p>Won Gold Medal for analytical insights and visualization presentation.</p>
   </div>
 
   <div class="certificate">
-    <h3>Data Analytics Bootcamp</h3>
+    <h3>Data Analytics Bootcamp – Verso Technologies</h3>
     <p class="date">December 2025</p>
-    <p>
-      Attended a 2-day Data Analytics Bootcamp conducted by Verso Technologies,
-      focusing on data analytics fundamentals, analytical thinking, and real-world
-      business use cases.
-    </p>
+    <p>Attended a 2-day intensive bootcamp on analytics fundamentals.</p>
   </div>
 
   <div class="certificate">
-    <h3>Career Readiness Training (CRT) – Clinical Data Visualization</h3>
-    <p class="date">September 2025 – October 2025</p>
-    <p>
-      Successfully completed a 12-day Career Readiness Training program on Clinical
-      Data Visualization using Power BI, along with resume building and LinkedIn
-      profile optimization, organized by ClinoSol Research.
-    </p>
+    <h3>Clinical Data Visualization (CRT) – ClinoSol</h3>
+    <p class="date">Sep–Oct 2025</p>
+    <p>Hands-on training in Power BI and resume optimization.</p>
   </div>
 
-  <!-- 2024 -->
   <div class="certificate">
     <h3>Data Analytics Training – Novitech</h3>
     <p class="date">August 2024</p>
-    <p>
-      Completed a Data Analytics training program conducted by Novitech,
-      covering data analysis concepts, data visualization basics, and analytical
-      problem-solving techniques.
-    </p>
+    <p>Completed analytics training covering real-world datasets.</p>
   </div>
 
   <div class="certificate">
-    <h3>Oracle Database Fundamentals</h3>
-    <p class="date">June 2024</p>
-    <p>
-      Gained hands-on knowledge of Oracle Database fundamentals, including SQL
-      queries, data manipulation, table creation, and database management concepts.
-    </p>
-  </div>
-
-  <!-- 2023 -->
-  <div class="certificate">
-    <h3>Power BI for Data Analytics</h3>
-    <p class="date">November 2023</p>
-    <p>
-      Learned to create interactive dashboards and visual reports using Microsoft
-      Power BI, focusing on data modeling, visual design, and basic DAX functions.
-    </p>
+    <h3>Power BI for Beginners</h3>
+    <p class="date">October 2023</p>
+    <p>Built dashboards and reports using Power BI.</p>
   </div>
 
   <div class="certificate">
     <h3>Introduction to Data Analytics</h3>
     <p class="date">July 2023</p>
-    <p>
-      Completed an introductory course on Data Analytics, covering core concepts,
-      data-driven decision-making, and real-world analytical applications.
-    </p>
-  </div>
-
-</section>
-<section id="contact">
-  <h2>Contact Me</h2>
-
-  <div class="contact-box">
-    <p><strong>Name:</strong> A.Sowmya</p>
-
-    <p>
-      <strong>Email:</strong>
-      <a href="mailto:sowmya029@gmail.com">
-        sowmya029@gmail.com
-      </a>
-    </p>
-
-    <p><strong>Phone:</strong> +91 8096167709</p>
-
-    <p><strong>Location:</strong> Hyderabad, India</p>
-<p>
-  <strong>LinkedIn:</strong>
-  <a href="https://www.linkedin.com/in/sowmyaagirishetti" target="_blank">
-    www.linkedin.com/in/sowmyaagirishetti
-  </a>
-</p>
+    <p>Learned core analytics concepts and data-driven decision making.</p>
   </div>
 </section>
-<!DOCTYPE html>
-<html>
-<head>
-<title>A. Sowmya | Portfolio</title>
 
-<style>
-/* ---- EXISTING STYLES ---- */
 
-.resume-buttons {
-  margin-top: 15px;
-}
-
-.resume-btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: #00bcd4;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  margin-right: 15px;
-}
-
-.resume-btn:hover {
-  background-color: #4caf50;
-}
-</style>
-
-</head>
+<!-- RESUME -->
 <section id="resume">
   <h2>Resume</h2>
-
-  <p>You can view or download my resume using the buttons below.</p>
-
-  <div class="resume-buttons">
-    <a href="resume.pdf" class="resume-btn" target="_blank">
-      View Resume
-    </a>
-
-    <a href="resume.pdf" class="resume-btn" download>
-      Download Resume
-    </a>
-  </div>
+  <a href="resume.pdf" class="resume-btn" target="_blank">View Resume</a>
+  <a href="resume.pdf" class="resume-btn" download>Download Resume</a>
 </section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p><b>Email:</b> sowmya029@gmail.com</p>
+  <p><b>Phone:</b> +91 8096167709</p>
+  <p><b>Location:</b> Hyderabad, India</p>
+  <p>
+    <b>LinkedIn:</b>
+    <a href="https://www.linkedin.com/in/sowmyaagirishetti" target="_blank">
+      linkedin.com/in/sowmyaagirishetti
+    </a>
+  </p>
+</section>
+
+</body>
+</html>
+
 
 
 
