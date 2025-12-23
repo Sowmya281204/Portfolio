@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>A. Sowmya | Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Projects | A. Sowmya</title>
 
   <style>
     body {
@@ -11,12 +12,14 @@
       color: white;
     }
 
+    /* NAVBAR */
     nav {
       background-color: #111;
       padding: 15px;
       text-align: center;
-position: sticky;
+      position: sticky;
       top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -31,49 +34,78 @@ position: sticky;
     }
 
     section {
- padding: 40px;
+      padding: 40px;
     }
 
     h1, h2 {
       color: #00bcd4;
     }
 
-    .box {
+    /* PROJECT BOX */
+    .project {
       background-color: #111;
-      padding: 20px;
+      padding: 25px;
       border-left: 4px solid #00bcd4;
       border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    .project img {
+      width: 100%;
+      max-width: 750px;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: 1px solid #333;
     }
   </style>
 </head>
 
 <body>
+
 <!-- NAVBAR -->
 <nav>
-  <a href="index.html">Home</a>
+  <a href="Home.html">Home</a>
   <a href="About me.html">About Me</a>
   <a href="Projects.html">Projects</a>
-  <a href="Certifications & Achievements.html">Certifications & Achievements</a>
-  <a href="Contact me.html">Contact</a>
+  <a href="Certifications.html">Certifications</a>
+  <a href="Contact.html">Contact</a>
 </nav>
 
+<section>
+  <h2>Projects</h2>
 
-<h2>Projects</h3>
-<p style="line-height:20px;"><h3>Sleep Health and Lifestyle Dashboard</h3>
-<p><b>Tools:</b> Power BI, Oracle, SQL</p>
-<p>
-Built an interactive dashboard to analyze sleep patterns, stress levels,
-BMI categories, blood pressure, and lifestyle factors using data from Oracle.
-</p>
-<img src="image2.png" width="600">
-<p style="line-height:20px;"><h3>Sales Overview Dasboard</h3>
-<p><b>Tools:</b> Power BI, Oracle, SQL</p>
-<p>
-Built an interactive dashboard to analyze sleep patterns, stress levels,
-BMI categories, blood pressure, and lifestyle factors using data from Oracle.
-</p>
-<img src="image.png" width="600"> 
-<section id="certifications">
-  <h2>Certifications & Achievements</h2>
+  <!-- PROJECT 1 -->
+  <div class="project">
+    <h3>Sleep Health and Lifestyle Dashboard</h3>
+    <p><b>Tools:</b> Power BI, Oracle, SQL</p>
+    <p>
+      Built an interactive dashboard to analyze sleep patterns, stress levels,
+      BMI categories, blood pressure, and lifestyle factors.
+    </p>
+
+    <!-- 👇 PASTE YOUR IMAGE PATH HERE -->
+    <img src="image2.png" alt="Sleep Health Dashboard">
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project">
+    <h3>Sales Overview Dashboard</h3>
+    <p><b>Tools:</b> Power BI, SQL</p>
+    <p>
+      Designed a sales performance dashboard analyzing revenue, discounts,
+      customer trends, and store-level insights.
+    </p>
+
+    <!-- 👇 PASTE YOUR IMAGE PATH HERE -->
+    <img src="image.png" alt="Sales Dashboard">
+  </div>
+
+</section>
+
+</body>
+</html>
+
+
+
 
  
