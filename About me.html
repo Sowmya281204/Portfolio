@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>A. Sowmya | Portfolio</title>
+  <meta charset="UTF-8">
+  <title>About Me | A. Sowmya</title>
 
   <style>
     body {
@@ -11,12 +12,14 @@
       color: white;
     }
 
+    /* NAVBAR */
     nav {
       background-color: #111;
       padding: 15px;
       text-align: center;
-position: sticky;
+      position: sticky;
       top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -31,104 +34,101 @@ position: sticky;
     }
 
     section {
- padding: 40px;
+      padding: 40px;
     }
 
     h1, h2 {
       color: #00bcd4;
     }
 
-    .box {
-      background-color: #111;
-      padding: 20px;
-      border-left: 4px solid #00bcd4;
-      border-radius: 8px;
+    /* TABS */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+
+    .tabs input {
+      display: none;
+    }
+
+    .tabs label {
+      padding: 10px 25px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #aaa;
+      margin-right: 25px;
+    }
+
+    .tabs .content {
+      width: 100%;
+      display: none;
+      padding-top: 20px;
+    }
+
+    .tabs input:checked + label {
+      color: #ff4d4d;
+      border-bottom: 2px solid #ff4d4d;
+    }
+
+    .tabs input:checked + label + .content {
+      display: block;
     }
   </style>
 </head>
 
 <body>
+
 <!-- NAVBAR -->
 <nav>
-  <a href="index.html">Home</a>
+  <a href="Home.html">Home</a>
   <a href="About me.html">About Me</a>
   <a href="Projects.html">Projects</a>
-  <a href="Certifications & Achievements.html">Certifications & Achievements</a>
-  <a href="Contact mez.html">Contact</a>
+  <a href="Certifications.html">Certifications</a>
+  <a href="Contact.html">Contact</a>
 </nav>
 
+<section>
+  <h2>About Me</h2>
+  <p>
+   Hi! I’m Sowmya, a dedicated Data Analyst passionate about transforming complex data into clear, actionable business strategies. I specialize in performing advanced statistical analysis and data modeling using R, and I excel at creating interactive, high-impact dashboards in Power BI and Tableau. My expertise extends to Advanced Excel (including VBA and complex modeling) and SQL for robust data extraction. Whether it's cleaning messy datasets or performing predictive analysis, I thrive on turning raw numbers into visual stories that drive informed decision-making. I’m always eager to leverage my technical toolkit to help organizations solve real-world problems through data.
 
-<h1 style="text-align:center;">Hi, I'm Sowmya Welcome to my Portfolio</h1>
-<h2>About me</h2> 
-<p style="line-height:20px;">Hi! I’m Sowmya, a dedicated Data Analyst passionate about transforming complex data into clear, actionable business strategies. I specialize in performing advanced statistical analysis and data modeling using R, and I excel at creating interactive, high-impact dashboards in Power BI and Tableau. My expertise extends to Advanced Excel (including VBA and complex modeling) and SQL for robust data extraction. Whether it's cleaning messy datasets or performing predictive analysis, I thrive on turning raw numbers into visual stories that drive informed decision-making. I’m always eager to leverage my technical toolkit to help organizations solve real-world problems through data.</p>
-<style>
-  .tabs {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 600px;
-    font-family: sans-serif;
-  }
-  .tabs input[type="radio"] {
-    display: none; /* Hides the actual radio circles */
-  }
-  .tabs label {
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #888;
-  }
-  .tabs .content {
-    display: none; /* Hides all content by default */
-    width: 100%;
-    padding: 20px;
-    order: 1;
-  }
-  /* When a radio is checked, change label color and show content */
-  .tabs input[type="radio"]:checked + label {
-    color: #ff4d4d;
-    border-bottom: 2px solid #ff4d4d;
-  }
-  .tabs input[type="radio"]:checked + label + .content {
-    display: block;
-  }
-</style>
+  </p>
 
-<div class="tabs">
-  <input type="radio" name="tabs" id="tabskills" checked>
-  <label for="tabskills">Skills</label>
-  <div class="content">
-    <p style="color: white; font-weight: bold;line-height:5px;">Programming</p>
-    <p>R,Python(Pandas,Numpy,Matplotlib)</p>
-    <p style="color: white; font-weight: bold;line-height:5px;">Databases</p> 
-    <p>SQL(MySQL,PostgreSQL)</p>
-    <p style="color: white; font-weight: bold;line-height:5px;">Data Visualization</p> 
-    <p>Tableau,Power BI,Excel Dahboards</p> 
-    <p style="color: white; font-weight: bold;line-height:5px;">Statistical Analysis</p> 
-    <p>Hypothesis Testing,Regression,Data Cleaning</p>  
+  <!-- TABS -->
+  <div class="tabs">
+
+    <!-- SKILLS -->
+    <input type="radio" name="tabs" id="skills" checked>
+    <label for="skills">Skills</label>
+    <div class="content">
+      <p><b>Programming:</b> R, Python (Pandas, NumPy, Matplotlib)</p>
+      <p><b>Databases:</b> SQL (MySQL, PostgreSQL)</p>
+      <p><b>Visualization:</b> Power BI, Tableau, Excel</p>
+      <p><b>Statistics:</b> Hypothesis Testing, Regression, Data Cleaning</p>
+    </div>
+
+    <!-- INTERNSHIP -->
+    <input type="radio" name="tabs" id="internship">
+    <label for="internship">Internship</label>
+    <div class="content">
+      <p><b>Data Analyst Intern</b></p>
+      <p>Worked on marketing research, documentation, and data analysis tasks.</p>
+    </div>
+
+    <!-- EDUCATION -->
+    <input type="radio" name="tabs" id="education">
+    <label for="education">Education</label>
+    <div class="content">
+      <p><b>BSc (MSCs)</b> – KV Ranga Reddy Degree College (2023–2026)</p>
+      <p><b>Intermediate</b> – Naveena Junior College (2021–2023)</p>
+      <p><b>SSC</b> – Central Grammar High School</p>
+    </div>
+
   </div>
+</section>
 
-  <input type="radio" name="tabs" id="tabexp">
-  <label for="tabexp">Internship</label>
-  <div class="content">
-    <p style="color: white; font-weight: bold;line-height:5px;">Data Analyst</p>
-    <p>Worked on tasks related to Marketing,Research,and Documentation.
-       performed well on assigned tasks.</p>
-  </div>
+</body>
+</html>
 
-  <input type="radio" name="tabs" id="tableu">
-  <label for="tableu">Education</label>
-  <div class="content">
-    <p style="color: ; font-weight: bold;line-height:5px;">K V Rangareddy Degree College For Women(2023-2026)</p>
-    <p>Degree in Bachelor of Science (MSCs)-[CGPA:8.0/10]</p>
-        <p style="color: white; font-weight: bold;line-height:5px;">Naveena Junior College(2021-2023)</p>
-    <p>Board of Intermediate-[GPA:9.1/10]</p>
-        <p style="color: white; font-weight: bold;line-height:5px;">Central Grammar High School(2021)</p>
-    <p>Board of Secondary Education-[GPA:10/10]</p>
-  </div>
-</div> 
-<body style="background-color: black;">
-<style>
-  body {
-    color: white;
-  }
-</style>
