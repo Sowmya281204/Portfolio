@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About| A. Sowmya</title>
+  <title>About | A. Sowmya</title>
 
   <style>
     body {
@@ -31,6 +31,12 @@
 
     nav a:hover {
       text-decoration: underline;
+    }
+
+    /* ACTIVE NAV LINK */
+    nav a.active {
+      text-transform: uppercase;
+      color: #00bcd4;
     }
 
     section {
@@ -83,7 +89,7 @@
 <!-- NAVBAR -->
 <nav>
   <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
+  <a href="about.html" class="active">About Me</a>
   <a href="projects.html">Projects</a>
   <a href="certifications.html">Certifications</a>
   <a href="contact.html">Contact</a>
@@ -92,37 +98,33 @@
 <section>
   <h2>About</h2>
   <p>
-   Hi! I’m Sowmya, a dedicated Data Analyst passionate about transforming complex data into clear, actionable business strategies. I specialize in performing advanced statistical analysis and data modeling using R, and I excel at creating interactive, high-impact dashboards in Power BI and Tableau. My expertise extends to Advanced Excel (including VBA and complex modeling) and SQL for robust data extraction. Whether it's cleaning messy datasets or performing predictive analysis, I thrive on turning raw numbers into visual stories that drive informed decision-making. I’m always eager to leverage my technical toolkit to help organizations solve real-world problems through data.
-
+    Hi! I’m Sowmya, a dedicated Data Analyst passionate about transforming complex
+    data into clear, actionable business strategies. I specialize in statistical
+    analysis, data modeling, and building dashboards using Power BI and Tableau.
   </p>
 
-  <!-- TABS -->
   <div class="tabs">
 
-    <!-- SKILLS -->
     <input type="radio" name="tabs" id="skills" checked>
     <label for="skills">Skills</label>
     <div class="content">
-      <p><b>Programming:</b> R, Python (Pandas, NumPy, Matplotlib)</p>
-      <p><b>Databases:</b> SQL (MySQL, PostgreSQL)</p>
-      <p><b>Visualization:</b> Power BI, Tableau, Excel</p>
-      <p><b>Statistics:</b> Hypothesis Testing, Regression, Data Cleaning</p>
+      <p><b>Programming:</b> R, Python</p>
+      <p><b>Databases:</b> SQL</p>
+      <p><b>Visualization:</b> Power BI, Tableau</p>
     </div>
 
-    <!-- INTERNSHIP -->
     <input type="radio" name="tabs" id="internship">
     <label for="internship">Internship</label>
     <div class="content">
       <p><b>Data Analyst Intern</b></p>
-      <p>Worked on marketing research, documentation, and data analysis tasks.</p>
+      <p>Worked on marketing research and data analysis tasks.</p>
     </div>
 
-    <!-- EDUCATION -->
     <input type="radio" name="tabs" id="education">
     <label for="education">Education</label>
     <div class="content">
-      <p><b>BSc (MSCs)</b> – KV Ranga Reddy Degree College (2023–2026)</p>
-      <p><b>Intermediate</b> – Naveena Junior College (2021–2023)</p>
+      <p><b>BSc (MSCs)</b> – KV Ranga Reddy Degree College</p>
+      <p><b>Intermediate</b> – Naveena Junior College</p>
       <p><b>SSC</b> – Central Grammar High School</p>
     </div>
 
@@ -131,6 +133,8 @@
 
 </body>
 </html>
+
+
 
 
 
