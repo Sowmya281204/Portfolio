@@ -34,30 +34,24 @@
       text-decoration: underline;
     }
 
-    section {
-      padding: 60px;
-    }
-
-    h1, h2 {
-      color: #00bcd4;
-    }
-
     /* HERO */
     .hero {
       height: 100vh;
       display: flex;
       align-items: center;
+      padding: 60px;
       background: radial-gradient(circle, #111, #000);
     }
 
     .hero-text h4 {
       color: #00e5ff;
       letter-spacing: 2px;
+      margin-bottom: 10px;
     }
 
     .hero-text h1 {
       font-size: 60px;
-      margin: 10px 0;
+      margin: 0;
     }
 
     .hero-text h1 span {
@@ -66,6 +60,7 @@
 
     .hero-text p {
       max-width: 520px;
+      margin: 20px 0;
       color: #ccc;
       line-height: 1.6;
     }
@@ -85,8 +80,16 @@
       background-color: #4caf50;
     }
 
-    ul {
-      margin-left: 20px;
+    section {
+      padding: 60px;
+    }
+
+    h2 {
+      color: #00bcd4;
+    }
+
+    ul li {
+      margin-bottom: 8px;
     }
   </style>
 </head>
@@ -102,14 +105,14 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO (TOP SECTION) -->
 <section class="hero">
   <div class="hero-text">
     <h4>DATA ANALYST</h4>
     <h1>Hi, I'm <span>Sowmya</span></h1>
     <p>
-      I analyze data to uncover insights and build interactive dashboards using
-      Power BI, SQL, and Oracle.
+      I analyze data to uncover insights and build interactive dashboards
+      using Power BI, SQL, and Oracle.
     </p>
 
     <a href="projects.html" class="hero-btn">View Projects</a>
@@ -117,12 +120,12 @@
   </div>
 </section>
 
-<!-- HOME SUMMARY (ABOUT PREVIEW) -->
+<!-- HOME SUMMARY -->
 <section>
   <h2>About Me</h2>
   <p>
     I am a Data Analyst skilled in Power BI, SQL, and Python, focused on
-    transforming data into actionable insights.
+    transforming raw data into actionable business insights.
   </p>
 
   <h3>Core Skills</h3>
@@ -135,7 +138,7 @@
   <a href="about.html" class="hero-btn">Read More</a>
 </section>
 
-<!-- RESUME AT BOTTOM -->
+<!-- RESUME (BOTTOM) -->
 <section>
   <h2>Resume</h2>
   <a href="resume.pdf" class="hero-btn" target="_blank">View Resume</a>
