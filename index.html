@@ -19,7 +19,6 @@
       text-align: center;
       position: sticky;
       top: 0;
-      z-index: 1000;
     }
 
     nav a {
@@ -36,7 +35,7 @@
 
     /* HERO */
     .hero {
-      height: 100vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       padding: 60px;
@@ -46,12 +45,11 @@
     .hero-text h4 {
       color: #00e5ff;
       letter-spacing: 2px;
-      margin-bottom: 10px;
     }
 
     .hero-text h1 {
       font-size: 60px;
-      margin: 0;
+      margin: 10px 0;
     }
 
     .hero-text h1 span {
@@ -59,13 +57,12 @@
     }
 
     .hero-text p {
-      max-width: 520px;
-      margin: 20px 0;
+      max-width: 600px;
       color: #ccc;
       line-height: 1.6;
     }
 
-    .hero-btn {
+    .btn {
       display: inline-block;
       padding: 12px 30px;
       background: #00e5ff;
@@ -73,11 +70,19 @@
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      margin-right: 15px;
+      margin: 10px 10px 0 0;
     }
 
-    .hero-btn:hover {
+    .btn:hover {
       background-color: #4caf50;
+    }
+
+    section {
+      padding: 40px 60px;
+    }
+
+    h2 {
+      color: #00bcd4;
     }
   </style>
 </head>
@@ -93,31 +98,41 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO / HOME -->
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h4>DATA ANALYST</h4>
+    <h1>Hi, I'm <span>Sowmya</span></h1>
+    <p>
+      I analyze data to uncover insights and build interactive dashboards
+      using Power BI, SQL, and Python.
+    </p>
+
+    <a href="projects.html" class="btn">View Projects</a>
+    <a href="resume.pdf" class="btn" target="_blank">View Resume</a>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+  </div>
+</section>
+
 <!-- HOME SUMMARY -->
 <section>
-  <h2>About Me</h2>
+  <h2>Quick Overview</h2>
   <p>
-    I am a Data Analyst skilled in Power BI, SQL, and Python, focused on
-    transforming data into actionable insights.
+    I am a dedicated Data Analyst passionate about transforming complex datasets
+    into actionable insights using analytics and visualization tools.
   </p>
 
   <h3>Core Skills</h3>
   <ul>
-    <li>Data Analysis & Visualization</li>
-    <li>Power BI, Tableau, Excel</li>
+    <li>Power BI, Tableau, Excel Dashboards</li>
     <li>SQL, Python (Pandas, NumPy)</li>
+    <li>Data Cleaning & Statistical Analysis</li>
   </ul>
 
-  <a href="about.html" class="hero-btn">Read More</a>
-</section>
-
-<section>
-  <h2>Resume</h2>
-  <a href="resume.pdf" class="hero-btn" target="_blank">View Resume</a>
-  <a href="resume.pdf" class="hero-btn" download>Download Resume</a>
+  <a href="about.html" class="btn">Read More About Me</a>
 </section>
 
 </body>
 </html>
+
 
